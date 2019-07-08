@@ -1,0 +1,202 @@
+
+
+ <!DOCTYPE html> 
+<html lang="en">
+<head>
+	<title>Vending Machine</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="css/main.css" rel="stylesheet"/>	
+</head>
+
+<body>
+	<!-- Header Div-->
+	<div class="row col-md-12" id="headerDiv">
+			<h1 style='text-align: center'>Vending Machine</h1>
+			<hr>
+	</div>
+
+	<!-- End of header Div-->
+
+	<!--Body of menu and input boxes-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9">
+				<!--Beggining of menu div-->
+				<div class="row" id="menus">
+					<div class="menudisplay col-md-3" data-id="1">
+							<p>1</p>
+							<p class="snackName">Snickers</p>
+							<p class="snackPrice">$1.85</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+
+					<div class="menudisplay col-md-3" data-id="2">
+							<p>2</p>
+							<p class="snackName">M & Ms</p>
+							<p class="snackPrice">$1.50</p>
+							<p class="snackQuantity">Quantity Left:</p>
+					</div>
+
+					<div class="menudisplay col-md-3" data-id="3">
+							<p>3</p>
+							<p class="snackName">Pringles</p>
+							<p class="snackPrice">$2.10</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+					<div class="menudisplay col-md-3" data-id="4">
+							<p>4</p>
+							<p class="snackName">Reese's</p>
+							<p class="snackPrice">$1.85</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+					<div class="menudisplay col-md-3" data-id="5">
+							<p>5</p>
+							<p class="snackName">Pretzels</p>
+							<p class="snackPrice">$1.25</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+					<div class="menudisplay col-md-3" data-id="6">
+							<p>6</p>
+							<p class="snackName">Twinkies</p>
+							<p class="snackPrice">$1.95</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+					<div class="menudisplay col-md-3" data-id="7">
+							<p>7</p>
+							<p class="snackName">Doritos</p>
+							<p class="snackPrice">$1.75</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+					<div class="menudisplay col-md-3" data-id="8">
+							<p>8</p>
+							<p class="snackName">Almond Joy</p>
+							<p class="snackPrice">$1.85</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+					<div class="menudisplay col-md-3" data-id="9">
+							<p>9</p>
+							<p class="snackName">Trident</p>
+							<p class="snackPrice">$1.95</p>
+							<p class="snackQuantity">Quantity Left: </p>
+					</div>
+
+				</div>
+								<!--End of menu div-->
+
+			</div>
+
+							<!--Beggining of  input div-->
+
+			<div align="center" class="col-md-3">		
+					<div class="form-group">
+						<form id='form'>
+					<label style="text-align: center">Total $ In</label>
+						<br/>
+					<input type="number" 
+					class="form-control" 
+					min="1"
+					max="10"
+					id="money" 
+					placeholder = "Amount" required/>
+					<div>
+							<button type="button" class="btn btn-light" style="border: solid; border-color: black"id= "addDollar">Add Dollar</button>
+							<button type="button" class="btn btn-light" style="border: solid; border-color: black" id= "addQuarter">Add Quarter</button>
+								<br/>
+							<button type="button" class="btn btn-light" style="border: solid; border-color: black"id= "addDime">Add Dime</button>
+							<button type="button" class="btn btn-light" style="border: solid; border-color: black" id= "addNickel">Add Nickel</button>
+								<hr style="color: black;">	
+							</div>
+						</form>
+						</div>
+						
+				</div>
+			
+
+				<div align="center"  class="col-md-3">		
+						<div class="form-group">
+							<form >
+								<div class="form-group">
+
+								<label id="messages">Messages</label>
+
+							<br/>
+							
+							<input type="text" id="messageOutput"/>
+								<br/>
+									<label>Item: </label>
+									
+						<input type="number" 
+						min="1"
+						max="9" 
+						id="itemInbox"
+						maxlength="5">
+							</div>
+							<br/>
+							<div>
+
+							<button type="button" class="btn btn-light" 
+							style="border: solid; border-color: black" 
+							id="makePurchase">Make Purchase</button>
+								<hr>	
+							</div>
+					
+						</form>
+							</div>
+					</div>
+
+					<div align="center"  class="col-md-3">		
+							<div class="form-group">
+						<form>
+									<div class="form-group">
+									<label>Change</label>
+								<br/>
+							<input type = "text" id="returnChange"/>
+								</div>
+								<div>
+								<button type="button" class="btn btn-light" 
+								style="border: solid; border-color: black" id="returnChangeb">
+								Change Return</button>
+									<hr>	
+								</div>
+						
+							</form>
+								</div>
+						</div>
+
+													<!--End of  input div-->
+
+</div>
+
+<div>
+		<footer style="background-color: gray">
+		border
+		</footer>
+	
+	</div>
+
+
+		 
+
+	</div>
+	<!-- End of body of menu and input boxes-->
+
+
+
+	<script
+		src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
+		<script src="js/dataservice.js"></script>
+		<script src="js/home.js"></script>
+
+
+</body>
+
+</html>
+
+
